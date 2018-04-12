@@ -77,8 +77,7 @@ Ultrasonic ultrasonic(ULTRAPinoT,ULTRAPinoE);
   myFile = SD.open("Datalog.csv", FILE_WRITE);//abrimos  o arquivo
   if (myFile) { 
         Serial.print("Escrevendo no  SD: ");
-        
-       
+        myFile.println("DATA;HORA;TEMPERATURA;DISTANCIA;LUZ");
         myFile.print(YEAR);
         myFile.print("/");
         myFile.print(MONTH);
